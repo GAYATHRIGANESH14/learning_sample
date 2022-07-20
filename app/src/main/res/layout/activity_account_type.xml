@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AccountTypeActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left_margine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right_margine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95"/>
+
+        <include
+            android:id="@+id/inclue_toolbar_Account"
+            layout="@layout/common_toolbar"
+            app:layout_constraintEnd_toEndOf="@id/right_margine"
+            app:layout_constraintStart_toStartOf="@+id/left_margine"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout_Account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/right_margine"
+            app:layout_constraintStart_toStartOf="@+id/left_margine"
+            app:layout_constraintTop_toBottomOf="@+id/inclue_toolbar_Account">
+
+            <include
+                android:id="@+id/included_header"
+                layout="@layout/common_header" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="#dedede"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="@id/right_margine"
+            app:layout_constraintStart_toStartOf="@+id/left_margine"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout_Account">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/img_customer"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="left|center"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_baseline_group_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_customer_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/img_customer"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Become a customer" />
+
+                <TextView
+                    android:id="@+id/txt_customer_details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/img_customer"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_customer_title"
+                    tools:text="Book Vehicles" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_owner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="#dedede"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="@id/right_margine"
+            app:layout_constraintStart_toStartOf="@+id/left_margine"
+            app:layout_constraintTop_toBottomOf="@+id/card_view">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/img_owner"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="left|center"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_baseline_person_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_owner_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/img_owner"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Become an owner" />
+
+                <TextView
+                    android:id="@+id/txt_owner_title_details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/img_owner"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_owner_title"
+                    tools:text="Add your vehicle" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_partner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="#dedede"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="@id/right_margine"
+            app:layout_constraintStart_toStartOf="@+id/left_margine"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_owner">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/img_partner"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="left|center"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_baseline_waving_hand_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_partner_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/img_partner"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Become an partner" />
+
+                <TextView
+                    android:id="@+id/txt_partner_title_details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/img_partner"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_partner_title"
+                    tools:text="Attach your vehicle" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_driver"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="#dedede"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="@id/right_margine"
+            app:layout_constraintStart_toStartOf="@+id/left_margine"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_partner">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/img_driver"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="left|center"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_baseline_directions_bus_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_driver_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/img_driver"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Become an driver" />
+
+                <TextView
+                    android:id="@+id/txt_driver_title_details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/img_driver"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_driver_title"
+                    tools:text="Drive vehicle" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
