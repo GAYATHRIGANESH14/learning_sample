@@ -25,6 +25,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+    }
 
     fun resendCode(view: View) {
         Toast.makeText(this, "Resend", Toast.LENGTH_SHORT).show()
